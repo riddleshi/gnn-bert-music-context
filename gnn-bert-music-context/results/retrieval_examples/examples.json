@@ -1,0 +1,322 @@
+[
+  {
+    "query_id": "track_000",
+    "query_caption": "A smoky tender jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+    "query_genre": "jazz",
+    "query_title": "Midnight Changes",
+    "hits": [
+      {
+        "id": "track_096",
+        "title": "Midnight Engine",
+        "genre": "jazz",
+        "caption": "A smoky bittersweet jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+        "score": 0.822432816028595,
+        "correct": false
+      },
+      {
+        "id": "track_016",
+        "title": "Amber Current",
+        "genre": "jazz",
+        "caption": "A small-group jazz recording: warm piano voicings, upright bass, and conversational horns in a tender club mix.",
+        "score": 0.8216215968132019,
+        "correct": false
+      },
+      {
+        "id": "track_034",
+        "title": "North Stations",
+        "genre": "classical",
+        "caption": "Classical writing: bowed strings swell over a piano accompaniment; the harmony is syncopated and unhurried.",
+        "score": 0.820129930973053,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "track_016",
+    "query_caption": "A small-group jazz recording: warm piano voicings, upright bass, and conversational horns in a tender club mix.",
+    "query_genre": "jazz",
+    "query_title": "Amber Current",
+    "hits": [
+      {
+        "id": "track_272",
+        "title": "Cedar Room",
+        "genre": "jazz",
+        "caption": "A small-group jazz recording: warm piano voicings, upright bass, and conversational horns in a hopeful club mix.",
+        "score": 0.8126042485237122,
+        "correct": false
+      },
+      {
+        "id": "track_176",
+        "title": "Cedar Stations",
+        "genre": "jazz",
+        "caption": "A small-group jazz recording: warm piano voicings, upright bass, and conversational horns in a sunny club mix.",
+        "score": 0.8121557831764221,
+        "correct": false
+      },
+      {
+        "id": "track_112",
+        "title": "Amber Current",
+        "genre": "jazz",
+        "caption": "A smoky buoyant jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+        "score": 0.8120609521865845,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "track_027",
+    "query_caption": "Club electronics with tightly quantized drums, evolving pads, and a warm four-chord loop.",
+    "query_genre": "electronic",
+    "query_title": "Neon Harbor",
+    "hits": [
+      {
+        "id": "track_027",
+        "title": "Neon Harbor",
+        "genre": "electronic",
+        "caption": "Club electronics with tightly quantized drums, evolving pads, and a warm four-chord loop.",
+        "score": 0.8592376112937927,
+        "correct": true
+      },
+      {
+        "id": "track_267",
+        "title": "Neon Stations",
+        "genre": "electronic",
+        "caption": "A modern electronic track: looping chord pads, sequenced drums, and chromatic synth leads built for the dance floor.",
+        "score": 0.8590859770774841,
+        "correct": false
+      },
+      {
+        "id": "track_219",
+        "title": "Neon Garden",
+        "genre": "electronic",
+        "caption": "A modern electronic track: looping chord pads, sequenced drums, and syncopated synth leads built for the dance floor.",
+        "score": 0.8521066904067993,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "track_030",
+    "query_caption": "Aggressive metal with palm-muted guitars, double-kick drums, and a shadowed minor riff that chromaticizes the tonic.",
+    "query_genre": "metal",
+    "query_title": "Velvet Changes",
+    "hits": [
+      {
+        "id": "track_270",
+        "title": "Velvet Room",
+        "genre": "metal",
+        "caption": "High-gain metal: tight rhythm guitars, blasting drums, and a chromatic vocal over a dark power-chord cycle.",
+        "score": 0.8939599990844727,
+        "correct": false
+      },
+      {
+        "id": "track_078",
+        "title": "Velvet Stations",
+        "genre": "metal",
+        "caption": "Aggressive metal with palm-muted guitars, double-kick drums, and a restless minor riff that chromaticizes the tonic.",
+        "score": 0.8932418823242188,
+        "correct": false
+      },
+      {
+        "id": "track_222",
+        "title": "Velvet Garden",
+        "genre": "metal",
+        "caption": "High-gain metal: tight rhythm guitars, blasting drums, and a chromatic vocal over a dark power-chord cycle.",
+        "score": 0.8890963792800903,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "track_032",
+    "query_caption": "A smoky sunny jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+    "query_genre": "jazz",
+    "query_title": "Cedar Current",
+    "hits": [
+      {
+        "id": "track_096",
+        "title": "Midnight Engine",
+        "genre": "jazz",
+        "caption": "A smoky bittersweet jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+        "score": 0.8267309069633484,
+        "correct": false
+      },
+      {
+        "id": "track_016",
+        "title": "Amber Current",
+        "genre": "jazz",
+        "caption": "A small-group jazz recording: warm piano voicings, upright bass, and conversational horns in a tender club mix.",
+        "score": 0.8235304951667786,
+        "correct": false
+      },
+      {
+        "id": "track_034",
+        "title": "North Stations",
+        "genre": "classical",
+        "caption": "Classical writing: bowed strings swell over a piano accompaniment; the harmony is syncopated and unhurried.",
+        "score": 0.8202875852584839,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "track_034",
+    "query_caption": "Classical writing: bowed strings swell over a piano accompaniment; the harmony is syncopated and unhurried.",
+    "query_genre": "classical",
+    "query_title": "North Stations",
+    "hits": [
+      {
+        "id": "track_096",
+        "title": "Midnight Engine",
+        "genre": "jazz",
+        "caption": "A smoky bittersweet jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+        "score": 0.8308233022689819,
+        "correct": false
+      },
+      {
+        "id": "track_016",
+        "title": "Amber Current",
+        "genre": "jazz",
+        "caption": "A small-group jazz recording: warm piano voicings, upright bass, and conversational horns in a tender club mix.",
+        "score": 0.8288648724555969,
+        "correct": false
+      },
+      {
+        "id": "track_034",
+        "title": "North Stations",
+        "genre": "classical",
+        "caption": "Classical writing: bowed strings swell over a piano accompaniment; the harmony is syncopated and unhurried.",
+        "score": 0.8271670937538147,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "query_id": "track_041",
+    "query_caption": "Arena-ready rock: stacked guitars, a locked-in rhythm section, and an restless chorus that lands on the tonic.",
+    "query_genre": "rock",
+    "query_title": "Hollow Harbor",
+    "hits": [
+      {
+        "id": "track_089",
+        "title": "Hollow Garden",
+        "genre": "rock",
+        "caption": "Arena-ready rock: stacked guitars, a locked-in rhythm section, and an fiery chorus that lands on the tonic.",
+        "score": 0.8893529772758484,
+        "correct": false
+      },
+      {
+        "id": "track_233",
+        "title": "Hollow Changes",
+        "genre": "rock",
+        "caption": "Arena-ready rock: stacked guitars, a locked-in rhythm section, and an restless chorus that lands on the tonic.",
+        "score": 0.888289749622345,
+        "correct": false
+      },
+      {
+        "id": "track_185",
+        "title": "Hollow Engine",
+        "genre": "rock",
+        "caption": "Garage rock with crunchy guitar, live drum feel, and a modal hook that repeats every eight bars.",
+        "score": 0.8876625895500183,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "track_044",
+    "query_caption": "A boom-bap hip-hop beat with a heavy sub bass, sparse drums, and restless vocal cadence over a minor loop.",
+    "query_genre": "hip-hop",
+    "query_title": "Cedar Letter",
+    "hits": [
+      {
+        "id": "track_284",
+        "title": "Cedar Room",
+        "genre": "hip-hop",
+        "caption": "Night-drive hip-hop with 808 bass, tight hats, and a restless minor-key pad underneath the verse.",
+        "score": 0.8462479710578918,
+        "correct": false
+      },
+      {
+        "id": "track_044",
+        "title": "Cedar Letter",
+        "genre": "hip-hop",
+        "caption": "A boom-bap hip-hop beat with a heavy sub bass, sparse drums, and restless vocal cadence over a minor loop.",
+        "score": 0.8370808959007263,
+        "correct": true
+      },
+      {
+        "id": "track_236",
+        "title": "Cedar Current",
+        "genre": "hip-hop",
+        "caption": "Night-drive hip-hop with 808 bass, tight hats, and a brooding minor-key pad underneath the verse.",
+        "score": 0.8285019397735596,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "track_048",
+    "query_caption": "A smoky driving jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+    "query_genre": "jazz",
+    "query_title": "Midnight Garden",
+    "hits": [
+      {
+        "id": "track_096",
+        "title": "Midnight Engine",
+        "genre": "jazz",
+        "caption": "A smoky bittersweet jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+        "score": 0.8263671398162842,
+        "correct": false
+      },
+      {
+        "id": "track_016",
+        "title": "Amber Current",
+        "genre": "jazz",
+        "caption": "A small-group jazz recording: warm piano voicings, upright bass, and conversational horns in a tender club mix.",
+        "score": 0.8241814970970154,
+        "correct": false
+      },
+      {
+        "id": "track_034",
+        "title": "North Stations",
+        "genre": "classical",
+        "caption": "Classical writing: bowed strings swell over a piano accompaniment; the harmony is syncopated and unhurried.",
+        "score": 0.822167158126831,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "track_064",
+    "query_caption": "A small-group jazz recording: warm piano voicings, upright bass, and conversational horns in a hushed club mix.",
+    "query_genre": "jazz",
+    "query_title": "Amber Garden",
+    "hits": [
+      {
+        "id": "track_082",
+        "title": "North Garden",
+        "genre": "classical",
+        "caption": "A chamber orchestra passage with lyrical strings and a tender piano figure outlining a slow I\u2013vi\u2013IV\u2013V cadence.",
+        "score": 0.8082355260848999,
+        "correct": false
+      },
+      {
+        "id": "track_112",
+        "title": "Amber Current",
+        "genre": "jazz",
+        "caption": "A smoky buoyant jazz combo with walking bass, brushed drums, and a lyrical piano line over ii\u2013V\u2013I changes.",
+        "score": 0.807998538017273,
+        "correct": false
+      },
+      {
+        "id": "track_080",
+        "title": "Cedar Engine",
+        "genre": "jazz",
+        "caption": "Late-night jazz with muted brass answering a piano ostinato; the harmony leans diatonic and unhurried.",
+        "score": 0.8052008748054504,
+        "correct": false
+      }
+    ]
+  }
+]

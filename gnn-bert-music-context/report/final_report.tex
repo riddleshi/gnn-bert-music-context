@@ -1,0 +1,145 @@
+\documentclass[11pt,a4paper]{article}
+\usepackage[margin=1in]{geometry}
+\usepackage{times}
+\usepackage{graphicx}
+\usepackage{amsmath,amssymb}
+\usepackage{booktabs}
+\usepackage{hyperref}
+\usepackage{caption}
+\usepackage{float}
+\hypersetup{colorlinks=true,linkcolor=black,citecolor=black,urlcolor=blue}
+\title{GNN-Based BERT for Understanding Context from Music}
+\author{Cadence Lab\\[4pt]\normalsize CSE425 / EEE474 / CSE715 --- Neural Networks}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+Music context is jointly harmonic, timbral, and linguistic. We implement the four-task roadmap of the course assignment: a BERT tag classifier on captions, a GraphSAGE encoder on segment and chord-transition graphs, a cross-attention GNN--BERT fusion model with DEAM-style valence/arousal heads, and a dual-encoder InfoNCE retriever. Because FMA, MagnaTagATune, MusicCaps and DEAM are not redistributable here, we train on a 288-clip synthetic corpus that preserves the \emph{interfaces} of those datasets: artist-disjoint splits, multi-label tags, expert-style captions, and continuous emotion targets. Held-out numbers in this draft come from that corpus and should be replaced with official-dataset runs before final submission.
+\end{abstract}
+
+\section{Introduction}
+A single clip can be jazz \emph{and} melancholic \emph{and} piano-led \emph{and} built from a ii--V--I. Convolutional models on spectrograms capture local timbre but not the relational structure of chord transitions or repeated segments. Language models on tags and captions capture semantics but not when those words align with a modulation or a drop.
+
+We follow the assignment's hybrid: BERT contextualizes $X_{\text{text}}$; a GNN message-passes on $G=(V,E)$; fusion produces a context vector $z$ for multi-label tags and optional emotion regression. Task~4 further aligns graph and caption towers in a shared sphere for retrieval. Unlike generative music projects, the objective is \emph{understanding}: tagging, emotion, and cross-modal alignment.
+
+\section{Problem definition}
+A track is $T=(X_{\text{audio}}, X_{\text{text}}, G, y)$. $X_{\text{audio}}$ is a log-mel spectrogram (128 bins, 22\,050\,Hz) plus chroma and MFCC. $X_{\text{text}}$ is a tokenized caption (max length 48). $G$ is either a segment graph (nodes = 1\,s windows; edges = temporal adjacency plus cosine similarity of chroma$\|$MFCC above $\tau=0.62$) or a chord-transition graph (nodes = unique estimated chords; edges weighted by observed transitions). Labels $y$ comprise 24 binary tags, an 8-way genre, and valence/arousal in $[0,1]$.
+
+BERT maps tokens to $H_{\text{text}}\in\mathbb{R}^{L\times d}$ and a CLS vector $t$. GraphSAGE updates
+\begin{equation}
+h_i^{(l+1)}=\sigma\Big(W^{(l)}\cdot \mathrm{CONCAT}\big(h_i^{(l)}, \mathrm{MEAN}_{j\in N(i)} h_j^{(l)}\big)\Big).
+\end{equation}
+Mean pooling yields $g$. Fusion produces $z=\mathrm{Fusion}(g,H_{\text{text}})$ and $\hat{y}=\sigma(Wz+b)$. The multi-label objective is binary cross-entropy plus $\lambda\mathcal{L}_{\text{aux}}$ on emotion.
+
+\section{Data}
+\subsection{Synthetic stand-in}
+We synthesize 8\,s clips at 22\,050\,Hz whose harmony, percussion density, captions, tags, and emotion ranges are genre-conditioned (jazz ii--V--I, pop I--V--vi--IV, metal palm-muted riffs, and so on). 48 artists $\times$ 6 tracks give 288 examples. Splits are artist-disjoint (train/val/test $\approx$ 192/48/48) to block leakage.
+
+Node features concatenate mean and standard deviation of log-mel, chroma, MFCC, RMS, spectral centroid, and zero-crossing rate over each segment (312-d). Chord IDs come from cosine matching of chroma against 24 major/minor templates.
+
+\subsection{Official data}
+Table~1 of the assignment remains the source of record. Recommended pairing: FMA-medium or FMA-small (audio + genre) with MusicCaps captions and DEAM valence/arousal. Loaders live in \texttt{src/real\_data.py}. Preprocessing is identical.
+
+\section{Models}
+\subsection{Task 1 --- BERT tag classifier}
+A 2-layer Transformer encoder (hidden 64, 4 heads, GELU, pre-norm) with a \texttt{[CLS]} token implements Algorithm~1. The classification head is a dropout-linear map to 24 tags trained with BCE. \texttt{TinyMusicBERT} exposes the same $(H_{\text{text}}, t_{\mathrm{cls}})$ interface as HuggingFace BERT; setting \texttt{model.hf\_name} in \texttt{config.yaml} swaps the backbone without touching fusion or contrastive code.
+
+\subsection{Task 2 --- GNN on music graphs}
+Dense batched GraphSAGE (and an optional GAT layer) operate on padded graphs with a node mask. We train (i)~an 8-way genre classifier and (ii)~a 24-tag multi-label head. The CNN baseline is a three-block convnet on a 64$\times$32 downsampled log-mel heatmap --- no graph, no text.
+
+\subsection{Task 3 --- Fusion}
+Cross-attention uses $Q=gW_Q$, $K=H_{\text{text}}W_K$, $A=\mathrm{softmax}(QK^\top/\sqrt{d})$, $z=\mathrm{MLP}([g; AH_{\text{text}}])$. The early-concat ablation uses $[g; t_{\mathrm{CLS}}]$ instead. Both share tag BCE and MSE on valence and arousal ($\alpha=\beta=0.35$).
+
+\subsection{Task 4 --- Contrastive dual encoder}
+Graph and caption towers project to a 64-d sphere. The loss is symmetric InfoNCE with temperature $\tau=0.07$. Retrieval metrics are R@1, R@5, R@10 in both directions on the held-out pairs.
+
+\section{Training}
+AdamW, learning rate $1.5\times10^{-3}$, weight decay $10^{-4}$, batch size 16, CPU or CUDA. Epochs: 10 (BERT), 14 (GNN/CNN/fusion), 16 (contrastive). Best validation checkpoint is restored before test evaluation.
+
+\section{Results}
+Numbers below are produced by \texttt{src/evaluate.py} into \texttt{results/metrics.json}. Replace this table with the official-dataset run before camera-ready submission.
+
+\begin{table}[H]
+\centering
+\caption{Held-out artist split ($N{=}48$). Chance caption$\to$audio R@5 $\approx 5/48 = 0.104$.}
+\label{tab:results}
+\begin{tabular}{lcccc}
+\toprule
+Model & Macro-F1 & AUC-PR & MAE (emotion) & R@5 \\
+\midrule
+Random tags & 0.002 & 0.325 & --- & --- \\
+Majority & 0.104 & 0.289 & --- & --- \\
+CNN mel-spec & 0.446 & 0.728 & --- & --- \\
+Task 1 BERT-only & \textbf{0.646} & 0.770 & --- & --- \\
+Task 2 GNN-only & 0.582 & 0.759 & --- & --- \\
+Task 3 concat & 0.630 & \textbf{0.798} & \textbf{0.077} & --- \\
+Task 3 cross-attn & 0.586 & 0.769 & 0.077 & --- \\
+Task 4 contrastive & --- & --- & --- & \textbf{0.542} \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+BERT-only wins tag F1 because MusicCaps-style templates are almost a tag lexicon; fusion still records the best AUC-PR (concat) and is the only model that jointly regresses valence/arousal ($R^2_{\text{arousal}}\approx 0.82$). Cross-attention is slightly behind concat on this small synthetic set --- the attention pool has little extra signal once CLS already summarises a 40-token caption. On compositional MusicCaps captions we expect the ranking to reverse.
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\linewidth]{../results/plots/f1_curves.png}
+\caption{Macro-F1 vs.\ epoch on the validation split.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\linewidth]{../results/plots/ablation.png}
+\caption{Test-set ablation: macro-F1 and AUC-PR.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth]{../results/plots/tsne_genre.png}
+\caption{t-SNE of the fusion vector $z$, coloured by genre.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.72\linewidth]{../results/plots/tsne_mood.png}
+\caption{t-SNE of $z$, coloured by valence/arousal quadrant.}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.7\linewidth]{../results/plots/valence_arousal.png}
+\caption{DEAM-style valence--arousal plane (fill = true, ring = predicted).}
+\end{figure}
+
+\begin{figure}[H]
+\centering
+\includegraphics[width=0.92\linewidth]{../results/plots/retrieval_examples.png}
+\caption{Caption $\to$ audio retrieval examples.}
+\end{figure}
+
+\subsection{Qualitative}
+The lab UI and \texttt{notebooks/demo\_context.ipynb} show (i)~five BERT tag predictions, (ii)~three case studies with chord paths plus caption alignment, (iii)~ten caption$\to$audio retrieval examples. Graph coherence $S_{\text{graph}}$ (fraction of edges with $\cos(h_i,h_j)>\tau$) is reported per clip in the explorer.
+
+\section{Discussion}
+Fusion should help when the caption names instruments or mood that the graph does not encode (e.g.\ ``muted brass'') and when the graph encodes a progression the caption only implies (``ii--V--I''). On this synthetic set BERT-only is a very strong tagger because captions are genre templates that almost list the tags. Concat fusion still wins AUC-PR and is the only head that emits calibrated valence/arousal. Cross-attention does not pull ahead until captions are longer and more compositional (MusicCaps). Other failure modes: tag co-occurrence leakage (guitar on both folk and metal), 8\,s clips that under-represent long-range form, and a 48-clip test split that makes R@1 noisy.
+
+\section{Reproducibility}
+Seed 42 in \texttt{config.yaml}. Example graphs: \texttt{data/processed/graphs/*.\{json,pt\}} ($\ge 24$ files). Environment: Python 3.10+, \texttt{pip install -r requirements.txt}. No artist appears in two splits. Code does not require PyTorch Geometric; GraphSAGE is dense batched PyTorch.
+
+\section{Conclusion}
+We shipped the full four-task GNN--BERT music-context pipeline, with baselines, ablations, retrieval, a demo notebook, and an interactive lab. The remaining graded work is to point the same code at FMA + MusicCaps + DEAM and regenerate Table~\ref{tab:results}.
+
+\begin{thebibliography}{8}
+\bibitem{devlin2019} J.~Devlin et al., ``BERT,'' NAACL 2019.
+\bibitem{hamilton2017} W.~Hamilton et al., ``GraphSAGE,'' NeurIPS 2017.
+\bibitem{velickovic2018} P.~Veli{\v{c}}kovi{\'c} et al., ``GAT,'' ICLR 2018.
+\bibitem{oord2018} A.~van den Oord et al., ``Representation learning with contrastive predictive coding,'' 2018.
+\bibitem{defferrard2017} M.~Defferrard et al., ``FMA: A dataset for music analysis,'' 2017.
+\bibitem{law2009} E.~Law et al., MagnaTagATune.
+\bibitem{agostinelli2023} A.~Agostinelli et al., MusicCaps / MusicLM, 2023.
+\bibitem{aljanaki2017} A.~Aljanaki et al., DEAM.
+\end{thebibliography}
+
+\end{document}

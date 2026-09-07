@@ -1,0 +1,71 @@
+{
+  "kind": "chord",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "Cmaj",
+      "x": -0.39779814143222547,
+      "y": 0.4116057104657365,
+      "energy": 11.759187698364258
+    },
+    {
+      "id": 1,
+      "label": "C#maj",
+      "x": 0.3979655086551506,
+      "y": -0.41142423374346326,
+      "energy": 11.81764030456543
+    },
+    {
+      "id": 2,
+      "label": "Emin",
+      "x": -0.5037966045135711,
+      "y": -1.0,
+      "energy": 11.730652809143066
+    },
+    {
+      "id": 3,
+      "label": "G#maj",
+      "x": 0.5036292372906459,
+      "y": 0.9998185232777264,
+      "energy": 11.802008628845215
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "weight": 1.0
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "weight": 1.0
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "weight": 2.0
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "weight": 2.0
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "weight": 1.0
+    }
+  ],
+  "chord_sequence": [
+    "G#maj",
+    "Cmaj",
+    "Emin",
+    "C#maj",
+    "Cmaj",
+    "G#maj",
+    "C#maj",
+    "Emin"
+  ],
+  "n_unique": 4
+}

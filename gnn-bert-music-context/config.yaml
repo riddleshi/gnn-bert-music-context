@@ -1,0 +1,54 @@
+seed: 42
+sample_rate: 22050
+n_mels: 128
+n_chroma: 12
+n_mfcc: 13
+segment_seconds: 1.0
+duration_seconds: 8.0
+similarity_tau: 0.62
+max_text_len: 48
+hop_length: 512
+
+model:
+  hidden_dim: 64
+  gnn_layers: 2
+  gnn_heads: 2
+  gnn_type: graphsage
+  bert_hidden: 64
+  bert_layers: 2
+  bert_heads: 4
+  vocab_size: 2500
+  dropout: 0.15
+  fusion: cross_attention
+  cnn_channels: [16, 32, 64]
+
+train:
+  batch_size: 16
+  epochs_task1: 10
+  epochs_task2: 14
+  epochs_task3: 14
+  epochs_task4: 16
+  lr: 0.0015
+  weight_decay: 0.0001
+  temperature: 0.07
+  alpha_emotion: 0.35
+  beta_emotion: 0.35
+  device: auto
+  log_every: 1
+
+data:
+  n_tracks: 288
+  n_artists: 48
+  n_genres: 8
+  n_tags: 24
+  train_frac: 0.67
+  val_frac: 0.16
+
+paths:
+  processed: data/processed
+  splits: data/splits
+  graphs: data/processed/graphs
+  results: results
+  plots: results/plots
+  checkpoints: results/checkpoints
+  demo_json: web/public/data/demo.json

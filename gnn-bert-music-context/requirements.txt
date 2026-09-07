@@ -1,0 +1,17 @@
+torch>=2.1
+numpy>=1.26
+scipy>=1.11
+pandas>=2.1
+scikit-learn>=1.4
+matplotlib>=3.8
+seaborn>=0.13
+networkx>=3.2
+librosa>=0.10
+soundfile>=0.12
+pyyaml>=6.0
+tqdm>=4.66
+fastapi>=0.110
+uvicorn>=0.27
+pillow>=10.0
+jupyter>=1.0
+nbformat>=5.9
