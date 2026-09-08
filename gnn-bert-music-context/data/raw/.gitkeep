@@ -1,0 +1,9 @@
+data/raw/.gitkeep
+data/processed/.gitkeep
+data/processed/graphs/.gitkeep
+data/splits/.gitkeep
+results/.gitkeep
+results/plots/.gitkeep
+results/retrieval_examples/.gitkeep
+results/checkpoints/.gitkeep
+web/public/data/.gitkeep
