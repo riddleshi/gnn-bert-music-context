@@ -1,0 +1,54 @@
+{
+  "kind": "chord",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "Cmaj",
+      "x": 0.4630575639177957,
+      "y": 1.0,
+      "energy": 11.864931106567383
+    },
+    {
+      "id": 1,
+      "label": "D#min",
+      "x": 0.49680922526421695,
+      "y": -0.8372624233334767,
+      "energy": 11.871366500854492
+    },
+    {
+      "id": 2,
+      "label": "Bmin",
+      "x": -0.959866789182012,
+      "y": -0.16273757666652242,
+      "energy": 11.837135314941406
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "weight": 2.0
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "weight": 2.0
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "weight": 3.0
+    }
+  ],
+  "chord_sequence": [
+    "Bmin",
+    "D#min",
+    "Cmaj",
+    "Bmin",
+    "D#min",
+    "Cmaj",
+    "Bmin",
+    "D#min"
+  ],
+  "n_unique": 3
+}

@@ -1,0 +1,161 @@
+{
+  "kind": "chord",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "C#maj",
+      "x": -0.24438627653022704,
+      "y": -0.5524600807719134,
+      "energy": 11.188155174255371
+    },
+    {
+      "id": 1,
+      "label": "C#min",
+      "x": -0.2295304938219219,
+      "y": -0.9183441875404109,
+      "energy": 12.035405158996582
+    },
+    {
+      "id": 2,
+      "label": "Dmin",
+      "x": 0.1113783427541618,
+      "y": 0.5537087082766927,
+      "energy": 10.815488815307617
+    },
+    {
+      "id": 3,
+      "label": "D#min",
+      "x": -0.3803120582076546,
+      "y": -0.15438783970307068,
+      "energy": 12.633772850036621
+    },
+    {
+      "id": 4,
+      "label": "Fmaj",
+      "x": 0.4114008645481237,
+      "y": 0.02797151351863161,
+      "energy": 11.411598205566406
+    },
+    {
+      "id": 5,
+      "label": "Gmaj",
+      "x": 0.09680734802837879,
+      "y": 0.28210245292998054,
+      "energy": 12.1311674118042
+    },
+    {
+      "id": 6,
+      "label": "Gmin",
+      "x": 0.27513724094547976,
+      "y": 1.0,
+      "energy": 12.234282493591309
+    },
+    {
+      "id": 7,
+      "label": "Amin",
+      "x": -0.040494967716340424,
+      "y": -0.23859056670991072,
+      "energy": 10.718847274780273
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "weight": 3.0
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "weight": 2.0
+    },
+    {
+      "source": 0,
+      "target": 7,
+      "weight": 5.0
+    },
+    {
+      "source": 1,
+      "target": 7,
+      "weight": 1.0
+    },
+    {
+      "source": 2,
+      "target": 4,
+      "weight": 1.0
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "weight": 1.0
+    },
+    {
+      "source": 2,
+      "target": 7,
+      "weight": 1.0
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "weight": 1.0
+    },
+    {
+      "source": 3,
+      "target": 7,
+      "weight": 3.0
+    },
+    {
+      "source": 4,
+      "target": 5,
+      "weight": 1.0
+    },
+    {
+      "source": 4,
+      "target": 7,
+      "weight": 2.0
+    },
+    {
+      "source": 5,
+      "target": 6,
+      "weight": 1.0
+    },
+    {
+      "source": 5,
+      "target": 7,
+      "weight": 1.0
+    }
+  ],
+  "chord_sequence": [
+    "Amin",
+    "Fmaj",
+    "Amin",
+    "Amin",
+    "Amin",
+    "C#maj",
+    "C#maj",
+    "C#maj",
+    "C#min",
+    "Amin",
+    "D#min",
+    "Gmaj",
+    "Amin",
+    "C#maj",
+    "C#maj",
+    "Amin",
+    "C#maj",
+    "C#min",
+    "C#maj",
+    "D#min",
+    "Amin",
+    "C#maj",
+    "D#min",
+    "Amin",
+    "Dmin",
+    "Gmin",
+    "Gmaj",
+    "Fmaj",
+    "Fmaj",
+    "Dmin"
+  ],
+  "n_unique": 8
+}

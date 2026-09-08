@@ -1,0 +1,110 @@
+{
+  "kind": "chord",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "Cmin",
+      "x": 0.18975314963187592,
+      "y": 0.19441929134534217,
+      "energy": 11.542717933654785
+    },
+    {
+      "id": 1,
+      "label": "Emaj",
+      "x": -0.023492798660655498,
+      "y": -0.15672412270798008,
+      "energy": 11.38443374633789
+    },
+    {
+      "id": 2,
+      "label": "F#maj",
+      "x": -1.0,
+      "y": -0.4761483518035585,
+      "energy": 11.10793685913086
+    },
+    {
+      "id": 3,
+      "label": "G#min",
+      "x": -0.029417653737784027,
+      "y": 0.8726092997251886,
+      "energy": 11.695724487304688
+    },
+    {
+      "id": 4,
+      "label": "Amaj",
+      "x": 0.8631573027665636,
+      "y": -0.43415611655899244,
+      "energy": 11.361471176147461
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 1,
+      "weight": 9.0
+    },
+    {
+      "source": 0,
+      "target": 2,
+      "weight": 1.0
+    },
+    {
+      "source": 0,
+      "target": 3,
+      "weight": 3.0
+    },
+    {
+      "source": 0,
+      "target": 4,
+      "weight": 2.0
+    },
+    {
+      "source": 1,
+      "target": 2,
+      "weight": 1.0
+    },
+    {
+      "source": 1,
+      "target": 3,
+      "weight": 2.0
+    },
+    {
+      "source": 1,
+      "target": 4,
+      "weight": 2.0
+    }
+  ],
+  "chord_sequence": [
+    "Cmin",
+    "G#min",
+    "G#min",
+    "Emaj",
+    "Cmin",
+    "Emaj",
+    "Cmin",
+    "Cmin",
+    "Cmin",
+    "Emaj",
+    "G#min",
+    "Cmin",
+    "Emaj",
+    "Emaj",
+    "Emaj",
+    "Emaj",
+    "Emaj",
+    "Cmin",
+    "F#maj",
+    "Emaj",
+    "Amaj",
+    "Emaj",
+    "Cmin",
+    "Cmin",
+    "Cmin",
+    "Amaj",
+    "Cmin",
+    "Emaj",
+    "Cmin",
+    "G#min"
+  ],
+  "n_unique": 5
+}

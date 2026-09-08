@@ -1,0 +1,322 @@
+[
+  {
+    "query_id": "fma_000620",
+    "query_caption": "A folk recording titled Arabesque by Ed Askew from the album Viridian City mixing Folk on Free Music Archive.",
+    "query_genre": "folk",
+    "query_title": "Arabesque",
+    "hits": [
+      {
+        "id": "fma_087192",
+        "title": "Gentle, Polite",
+        "genre": "pop",
+        "caption": "A pop recording titled Gentle, Polite by Eric & Magill from the album All Those I Know mixing Pop on Free Music Archive.",
+        "score": 0.7148095369338989,
+        "correct": false
+      },
+      {
+        "id": "fma_006360",
+        "title": "Sabah Sabah Seyredelim Yaliyi",
+        "genre": "folk",
+        "caption": "A folk recording titled Sabah Sabah Seyredelim Yaliyi by Orkestra Keyif from the album Keyif Live on WFMU from the 2009 Golden Festival in NYC mixing International, Middle East, Balkan on Free Music Archive.",
+        "score": 0.7123254537582397,
+        "correct": false
+      },
+      {
+        "id": "fma_144474",
+        "title": "Telepathic Teleplay (Instrumental)",
+        "genre": "folk",
+        "caption": "A folk recording titled Telepathic Teleplay (Instrumental) by Nick Jaina from the album Brutal Lives (Instrumentals) mixing Singer-Songwriter on Free Music Archive.",
+        "score": 0.7088415026664734,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "fma_005191",
+    "query_caption": "A pop recording titled Say What You Feel by caUSE co-MOTION from the album Live at WFMU on Michael Goodstein's Show on 9/13/2004 mixing Pop on Free Music Archive.",
+    "query_genre": "pop",
+    "query_title": "Say What You Feel",
+    "hits": [
+      {
+        "id": "fma_134928",
+        "title": "-Uskudara Gideriken",
+        "genre": "folk",
+        "caption": "A folk recording titled -Uskudara Gideriken by Turku, Nomads of the Silk Road from the album Alleys of Istanbul mixing International, Middle East, Turkish on Free Music Archive.",
+        "score": 0.7130727767944336,
+        "correct": false
+      },
+      {
+        "id": "fma_148233",
+        "title": "Hit The Drums",
+        "genre": "folk",
+        "caption": "A folk recording titled Hit The Drums by Josh Armistead from the album Live @ 3CR Radio - Collingwood Melbourne. mixing Psych-Folk, Singer-Songwriter on Free Music Archive.",
+        "score": 0.7110451459884644,
+        "correct": false
+      },
+      {
+        "id": "fma_134918",
+        "title": "-Sheydaii",
+        "genre": "folk",
+        "caption": "A folk recording titled -Sheydaii by Turku, Nomads of the Silk Road from the album Nomads of the Silk Road mixing International, Middle East, Turkish on Free Music Archive.",
+        "score": 0.7100330591201782,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "fma_006360",
+    "query_caption": "A folk recording titled Sabah Sabah Seyredelim Yaliyi by Orkestra Keyif from the album Keyif Live on WFMU from the 2009 Golden Festival in NYC mixing International, Middle East, Balkan on Free Music Archive.",
+    "query_genre": "folk",
+    "query_title": "Sabah Sabah Seyredelim Yaliyi",
+    "hits": [
+      {
+        "id": "fma_087192",
+        "title": "Gentle, Polite",
+        "genre": "pop",
+        "caption": "A pop recording titled Gentle, Polite by Eric & Magill from the album All Those I Know mixing Pop on Free Music Archive.",
+        "score": 0.7197265625,
+        "correct": false
+      },
+      {
+        "id": "fma_006360",
+        "title": "Sabah Sabah Seyredelim Yaliyi",
+        "genre": "folk",
+        "caption": "A folk recording titled Sabah Sabah Seyredelim Yaliyi by Orkestra Keyif from the album Keyif Live on WFMU from the 2009 Golden Festival in NYC mixing International, Middle East, Balkan on Free Music Archive.",
+        "score": 0.7088854312896729,
+        "correct": true
+      },
+      {
+        "id": "fma_109357",
+        "title": "Dumb",
+        "genre": "rock",
+        "caption": "A rock recording titled Dumb by TIGERBERRY from the album Spirit Kit mixing Lo-Fi, Indie-Rock, Post-Punk on Free Music Archive.",
+        "score": 0.7080816030502319,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "fma_007373",
+    "query_caption": "A electronic recording titled heartbreaker by Lucky Dragons from the album Dark Falcon mixing Audio Collage, Experimental on Free Music Archive.",
+    "query_genre": "electronic",
+    "query_title": "heartbreaker",
+    "hits": [
+      {
+        "id": "fma_087192",
+        "title": "Gentle, Polite",
+        "genre": "pop",
+        "caption": "A pop recording titled Gentle, Polite by Eric & Magill from the album All Those I Know mixing Pop on Free Music Archive.",
+        "score": 0.7192213535308838,
+        "correct": false
+      },
+      {
+        "id": "fma_109357",
+        "title": "Dumb",
+        "genre": "rock",
+        "caption": "A rock recording titled Dumb by TIGERBERRY from the album Spirit Kit mixing Lo-Fi, Indie-Rock, Post-Punk on Free Music Archive.",
+        "score": 0.7102981805801392,
+        "correct": false
+      },
+      {
+        "id": "fma_043593",
+        "title": "Auzi Mama",
+        "genre": "folk",
+        "caption": "A folk recording titled Auzi Mama by Gipsyork from the album GY Live at the Golden Festival, Jan 15 2011 mixing Romany (Gypsy) on Free Music Archive.",
+        "score": 0.7095299363136292,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "fma_007711",
+    "query_caption": "A folk recording titled The Way by Mia Doi Todd from the album Live at WFMU on Trouble's Show on 3/03/2005 mixing Folk, Singer-Songwriter on Free Music Archive.",
+    "query_genre": "folk",
+    "query_title": "The Way",
+    "hits": [
+      {
+        "id": "fma_087192",
+        "title": "Gentle, Polite",
+        "genre": "pop",
+        "caption": "A pop recording titled Gentle, Polite by Eric & Magill from the album All Those I Know mixing Pop on Free Music Archive.",
+        "score": 0.7240992188453674,
+        "correct": false
+      },
+      {
+        "id": "fma_109357",
+        "title": "Dumb",
+        "genre": "rock",
+        "caption": "A rock recording titled Dumb by TIGERBERRY from the album Spirit Kit mixing Lo-Fi, Indie-Rock, Post-Punk on Free Music Archive.",
+        "score": 0.7089832425117493,
+        "correct": false
+      },
+      {
+        "id": "fma_110611",
+        "title": "Happy Birthday To You",
+        "genre": "electronic",
+        "caption": "A electronic recording titled Happy Birthday To You by Jeff Kolar from the album Hallmark Cards Vol. 2: Happy Birthday To You mixing Noise, Experimental, Drone on Free Music Archive.",
+        "score": 0.7086758613586426,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "fma_009511",
+    "query_caption": "A rock recording titled Message From the Law by Sic Alps from the album Description Of The Harbor mixing Psych-Rock, Garage on Free Music Archive.",
+    "query_genre": "rock",
+    "query_title": "Message From the Law",
+    "hits": [
+      {
+        "id": "fma_087192",
+        "title": "Gentle, Polite",
+        "genre": "pop",
+        "caption": "A pop recording titled Gentle, Polite by Eric & Magill from the album All Those I Know mixing Pop on Free Music Archive.",
+        "score": 0.7208176851272583,
+        "correct": false
+      },
+      {
+        "id": "fma_109357",
+        "title": "Dumb",
+        "genre": "rock",
+        "caption": "A rock recording titled Dumb by TIGERBERRY from the album Spirit Kit mixing Lo-Fi, Indie-Rock, Post-Punk on Free Music Archive.",
+        "score": 0.7080988883972168,
+        "correct": false
+      },
+      {
+        "id": "fma_110611",
+        "title": "Happy Birthday To You",
+        "genre": "electronic",
+        "caption": "A electronic recording titled Happy Birthday To You by Jeff Kolar from the album Hallmark Cards Vol. 2: Happy Birthday To You mixing Noise, Experimental, Drone on Free Music Archive.",
+        "score": 0.7066149115562439,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "fma_013556",
+    "query_caption": "A rock recording titled Let Me Go by STEEP from the album netBloc Vol. 05: The threat at Goliath's feet... mixing Rock on Free Music Archive.",
+    "query_genre": "rock",
+    "query_title": "Let Me Go",
+    "hits": [
+      {
+        "id": "fma_087192",
+        "title": "Gentle, Polite",
+        "genre": "pop",
+        "caption": "A pop recording titled Gentle, Polite by Eric & Magill from the album All Those I Know mixing Pop on Free Music Archive.",
+        "score": 0.7263329029083252,
+        "correct": false
+      },
+      {
+        "id": "fma_067332",
+        "title": "Island Pop",
+        "genre": "pop",
+        "caption": "A pop recording titled Island Pop by Drama for Yamaha from the album Archipelago mixing Experimental Pop on Free Music Archive.",
+        "score": 0.7227417826652527,
+        "correct": false
+      },
+      {
+        "id": "fma_138351",
+        "title": "2/3 Straight Edge",
+        "genre": "rock",
+        "caption": "A rock recording titled 2/3 Straight Edge by Angstbreaker from the album MMXVI mixing Punk, Hardcore on Free Music Archive.",
+        "score": 0.7212032079696655,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "fma_013749",
+    "query_caption": "A hip-hop recording titled 110% (radio edit) by Laws from the album The Funny Pages mixing Hip-Hop on Free Music Archive.",
+    "query_genre": "hip-hop",
+    "query_title": "110% (radio edit)",
+    "hits": [
+      {
+        "id": "fma_145758",
+        "title": "Spicy",
+        "genre": "electronic",
+        "caption": "A electronic recording titled Spicy by SPCZ from the album Vespidae mixing Ambient Electronic, Dubstep on Free Music Archive.",
+        "score": 0.7337668538093567,
+        "correct": false
+      },
+      {
+        "id": "fma_145756",
+        "title": "Easy",
+        "genre": "electronic",
+        "caption": "A electronic recording titled Easy by SPCZ from the album Vespidae mixing Ambient Electronic, Dubstep on Free Music Archive.",
+        "score": 0.7263020277023315,
+        "correct": false
+      },
+      {
+        "id": "fma_013749",
+        "title": "110% (radio edit)",
+        "genre": "hip-hop",
+        "caption": "A hip-hop recording titled 110% (radio edit) by Laws from the album The Funny Pages mixing Hip-Hop on Free Music Archive.",
+        "score": 0.7100436687469482,
+        "correct": true
+      }
+    ]
+  },
+  {
+    "query_id": "fma_022150",
+    "query_caption": "A electronic recording titled The Horror Approaches by Jeff McLeod from the album Ever-Stretching Shadow mixing Avant-Garde, Noise, Experimental, Improv on Free Music Archive.",
+    "query_genre": "electronic",
+    "query_title": "The Horror Approaches",
+    "hits": [
+      {
+        "id": "fma_067332",
+        "title": "Island Pop",
+        "genre": "pop",
+        "caption": "A pop recording titled Island Pop by Drama for Yamaha from the album Archipelago mixing Experimental Pop on Free Music Archive.",
+        "score": 0.7204377055168152,
+        "correct": false
+      },
+      {
+        "id": "fma_087192",
+        "title": "Gentle, Polite",
+        "genre": "pop",
+        "caption": "A pop recording titled Gentle, Polite by Eric & Magill from the album All Those I Know mixing Pop on Free Music Archive.",
+        "score": 0.7198404669761658,
+        "correct": false
+      },
+      {
+        "id": "fma_138351",
+        "title": "2/3 Straight Edge",
+        "genre": "rock",
+        "caption": "A rock recording titled 2/3 Straight Edge by Angstbreaker from the album MMXVI mixing Punk, Hardcore on Free Music Archive.",
+        "score": 0.7177761793136597,
+        "correct": false
+      }
+    ]
+  },
+  {
+    "query_id": "fma_022295",
+    "query_caption": "A hip-hop recording titled Sorry by Comfort Fit from the album Forget And Remember mixing Hip-Hop on Free Music Archive.",
+    "query_genre": "hip-hop",
+    "query_title": "Sorry",
+    "hits": [
+      {
+        "id": "fma_145758",
+        "title": "Spicy",
+        "genre": "electronic",
+        "caption": "A electronic recording titled Spicy by SPCZ from the album Vespidae mixing Ambient Electronic, Dubstep on Free Music Archive.",
+        "score": 0.7354099154472351,
+        "correct": false
+      },
+      {
+        "id": "fma_145756",
+        "title": "Easy",
+        "genre": "electronic",
+        "caption": "A electronic recording titled Easy by SPCZ from the album Vespidae mixing Ambient Electronic, Dubstep on Free Music Archive.",
+        "score": 0.7279559373855591,
+        "correct": false
+      },
+      {
+        "id": "fma_013749",
+        "title": "110% (radio edit)",
+        "genre": "hip-hop",
+        "caption": "A hip-hop recording titled 110% (radio edit) by Laws from the album The Funny Pages mixing Hip-Hop on Free Music Archive.",
+        "score": 0.7115393280982971,
+        "correct": false
+      }
+    ]
+  }
+]

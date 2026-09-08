@@ -1,0 +1,134 @@
+{
+  "kind": "chord",
+  "nodes": [
+    {
+      "id": 0,
+      "label": "C#maj",
+      "x": 1.0,
+      "y": 0.6798287864054852,
+      "energy": 10.590991973876953
+    },
+    {
+      "id": 1,
+      "label": "Dmin",
+      "x": -0.8233261473652205,
+      "y": -0.40995211942331833,
+      "energy": 11.795783042907715
+    },
+    {
+      "id": 2,
+      "label": "D#min",
+      "x": -0.5624290529507876,
+      "y": 0.09268637819560892,
+      "energy": 11.447417259216309
+    },
+    {
+      "id": 3,
+      "label": "Emin",
+      "x": 0.1149125726268577,
+      "y": 0.3028411028644865,
+      "energy": 10.568060874938965
+    },
+    {
+      "id": 4,
+      "label": "Gmaj",
+      "x": 0.8188615484722611,
+      "y": -0.03922859980028409,
+      "energy": 11.823766708374023
+    },
+    {
+      "id": 5,
+      "label": "G#maj",
+      "x": -0.22533561056919704,
+      "y": -0.4894754286482136,
+      "energy": 11.513277053833008
+    },
+    {
+      "id": 6,
+      "label": "A#min",
+      "x": -0.3226833102139138,
+      "y": -0.13670011959376555,
+      "energy": 11.088088989257812
+    }
+  ],
+  "edges": [
+    {
+      "source": 0,
+      "target": 3,
+      "weight": 1.0
+    },
+    {
+      "source": 0,
+      "target": 4,
+      "weight": 1.0
+    },
+    {
+      "source": 1,
+      "target": 6,
+      "weight": 6.0
+    },
+    {
+      "source": 2,
+      "target": 3,
+      "weight": 1.0
+    },
+    {
+      "source": 2,
+      "target": 5,
+      "weight": 3.0
+    },
+    {
+      "source": 2,
+      "target": 6,
+      "weight": 4.0
+    },
+    {
+      "source": 3,
+      "target": 5,
+      "weight": 1.0
+    },
+    {
+      "source": 3,
+      "target": 6,
+      "weight": 2.0
+    },
+    {
+      "source": 4,
+      "target": 6,
+      "weight": 1.0
+    }
+  ],
+  "chord_sequence": [
+    "Emin",
+    "Emin",
+    "A#min",
+    "Dmin",
+    "A#min",
+    "D#min",
+    "D#min",
+    "G#maj",
+    "D#min",
+    "A#min",
+    "Dmin",
+    "A#min",
+    "D#min",
+    "D#min",
+    "Emin",
+    "A#min",
+    "A#min",
+    "Dmin",
+    "A#min",
+    "D#min",
+    "G#maj",
+    "Emin",
+    "C#maj",
+    "C#maj",
+    "C#maj",
+    "C#maj",
+    "Gmaj",
+    "A#min",
+    "A#min",
+    "A#min"
+  ],
+  "n_unique": 7
+}
